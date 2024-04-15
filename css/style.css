@@ -6,7 +6,7 @@
 
 body {
   min-height: 100vh;
-  box-shadow: inset 0 10px 20px #d6d6d6;
+  box-shadow: inset 0 10px 10px #ebeaea;
 }
 
 #sub-container {
@@ -46,31 +46,45 @@ body {
   min-width: 400px;
   height: 100%;
 }
-#sub-container #main .info {
+#sub-container #main .main-product__content {
   padding: 20px;
 }
-#sub-container #main .info .title-info {
+#sub-container #main .main-product__content .main-product__title {
   font-size: 2em;
   margin-bottom: 10px;
 }
-#sub-container #main .info .text-info__content {
+#sub-container #main .main-product__content .main-product__info-content {
   background-color: #d6d6d6;
-  height: 150px;
-  margin-bottom: 20px;
+  height: 200px;
 }
-#sub-container #main .info .text-info__content .text-info {
+#sub-container #main .main-product__content .main-product__info-content .main-product__info {
   color: #4d4b4b;
 }
-#sub-container #main .info .colors-container .colors-list {
+#sub-container #main .main-product__content .color-container {
+  max-width: max-content;
+  margin: 20px auto;
+}
+#sub-container #main .main-product__content .color-container .color-list {
   display: flex;
   gap: 30px;
   list-style: none;
 }
-#sub-container #main .info .colors-container .colors-list .colors-list__item {
+#sub-container #main .main-product__content .color-container .color-list .color-list__item {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background-color: #4d4b4b;
+}
+#sub-container #main .main-product__content .color-container .color-list #red {
+  background-color: #f00;
+}
+#sub-container #main .main-product__content .color-container .color-list #yellow {
+  background-color: #ff0;
+}
+#sub-container #main .main-product__content .color-container .color-list #blue {
+  background-color: #00f;
+}
+#sub-container #main .main-product__content .color-container .color-list #green {
+  background-color: #080;
 }
 
 /*# sourceMappingURL=style.css.map */
