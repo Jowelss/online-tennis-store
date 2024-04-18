@@ -1,5 +1,9 @@
-const product = document.querySelector('.main-product__content');
+const buttonNext = document.getElementById('button_next');
+const template = document.getElementById('template');
+const fragment = document.createDocumentFragment();
 
-// Agregar a este array cada producto cuando el usuario de click en 'add to cart'
-// Mi idea ya esta mas o menos clara
-const cart = [{ item: { name: '', color: '', size: '' } }];
+buttonNext.addEventListener('click', () => {
+  const copyTemplate = document.importNode(template.content, true);
+  const elements = copyTemplate.querySelectorAll('.product');
+  console.log(elements);
+});
