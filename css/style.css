@@ -32,11 +32,16 @@ body {
   text-decoration: none;
 }
 #sub-container #main {
+  position: relative;
   display: flex;
   margin-top: 50px;
   border-radius: 10px;
   border: 1px solid black;
   overflow: hidden;
+}
+#sub-container #main #button_next {
+  position: absolute;
+  right: 0px;
 }
 #sub-container #main .main-image__content {
   min-width: 450px;

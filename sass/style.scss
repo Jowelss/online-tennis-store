@@ -40,11 +40,17 @@ body {
   }
 
   #main {
+    position: relative;
     display: flex;
     margin-top: 50px;
     border-radius: 10px;
     border: 1px solid black;
     overflow: hidden;
+
+    #button_next {
+      position: absolute;
+      right: 0px;
+    }
 
     .main-image__content {
       min-width: 450px;
