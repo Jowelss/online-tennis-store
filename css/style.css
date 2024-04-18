@@ -73,27 +73,25 @@ body {
   gap: 30px;
   list-style: none;
 }
-#sub-container #main .main-product__content .color-container .color-list .color-list__item {
-  border-radius: 100%;
-}
 #sub-container #main .main-product__content .color-container .color-list .color-list__item .color-list__link {
+  border-radius: 100%;
   display: block;
   width: 25px;
   height: 25px;
 }
-#sub-container #main .main-product__content .color-container .color-list #red {
+#sub-container #main .main-product__content .color-container .color-list .color-list__item #red {
   background-color: #f00;
 }
-#sub-container #main .main-product__content .color-container .color-list #yellow {
+#sub-container #main .main-product__content .color-container .color-list .color-list__item #yellow {
   background-color: #ff0;
 }
-#sub-container #main .main-product__content .color-container .color-list #blue {
+#sub-container #main .main-product__content .color-container .color-list .color-list__item #blue {
   background-color: #00f;
 }
-#sub-container #main .main-product__content .color-container .color-list #green {
+#sub-container #main .main-product__content .color-container .color-list .color-list__item #green {
   background-color: #080;
 }
-#sub-container #main .main-product__content .color-container .color-list #black {
+#sub-container #main .main-product__content .color-container .color-list .color-list__item #black {
   background-color: #000;
 }
 #sub-container #main .main-product__content .size-container {

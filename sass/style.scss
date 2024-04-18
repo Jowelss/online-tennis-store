@@ -85,27 +85,27 @@ body {
           gap: 30px;
           list-style: none;
           .color-list__item {
-            border-radius: 100%;
             .color-list__link {
+              border-radius: 100%;
               display: block;
               width: 25px;
               height: 25px;
             }
-          }
-          #red {
-            background-color: #f00;
-          }
-          #yellow {
-            background-color: #ff0;
-          }
-          #blue {
-            background-color: #00f;
-          }
-          #green {
-            background-color: #080;
-          }
-          #black {
-            background-color: #000;
+            #red {
+              background-color: #f00;
+            }
+            #yellow {
+              background-color: #ff0;
+            }
+            #blue {
+              background-color: #00f;
+            }
+            #green {
+              background-color: #080;
+            }
+            #black {
+              background-color: #000;
+            }
           }
         }
       }
