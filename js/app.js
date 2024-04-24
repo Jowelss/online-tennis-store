@@ -1,11 +1,12 @@
-const button = document.getElementById('button_next');
-const template = document.getElementById('template');
-const fragment = document.createDocumentFragment();
+const colors = document.querySelectorAll('.color-list__link');
 
-button.addEventListener('click', () => {
-  const copyTemplate = document.importNode(template.content, true);
-  const title = copyTemplate.querySelector('.product-3__title').textContent;
+const cart = [{}];
+
+colors.forEach((color) => {
+  color.addEventListener('click', (e) => {
+    const item = e.target.id;
+
+    cart.color = item;
+    console.log(cart);
+  });
 });
-
-// function templateCopy() {
-// }
