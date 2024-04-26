@@ -1,14 +1,17 @@
 const colors = document.querySelectorAll('.color-list__link');
-const sizes = document.querySelectorAll('.size-item__link');
 
-const cartData = (color) => {
-  const product = [];
+const cart = [];
+
+const addCart = (color) => {
+  if (cart < 2) {
+    cart.push(color);
+  } else {
+    console.log('coso');
+  }
 };
 
-for (let i = 0; i < colors.length; i++) {
-  const contentColor = colors[i];
-
-  contentColor.addEventListener('click', (e) => {
-    cartData(e.target.id);
+colors.forEach((element) => {
+  element.addEventListener('click', (e) => {
+    addCart(e.target.id);
   });
-}
+});
