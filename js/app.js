@@ -1,10 +1,27 @@
-const colors = document.querySelectorAll('.color-list__link');
+const product = document.querySelector('.main-product__content');
 
-const cart = [];
+const colors = ['red', 'yellow', 'blue', 'green', 'black'];
+const sizes = ['S', 'L', 'M', 'O', 'R'];
 
-colors.forEach((element) => {
-  element.addEventListener('click', (e) => {
-    cart.push(e.target.id);
-    console.log(cart);
-  });
+const array = [];
+
+product.addEventListener('click', (e) => {
+  const item = e.target.id;
+
+  for (const color of colors) {
+    if (color === item) {
+      if (!array.includes(item)) {
+        array.push(item);
+      }
+    }
+  }
+
+  for (const size of sizes) {
+    if (size === item) {
+      if (!array.includes(item)) {
+        array.push(item);
+      }
+    }
+  }
+  console.log(array);
 });
