@@ -1,27 +1,21 @@
-const product = document.querySelector('.main-product__content');
+const select = document.querySelectorAll('.product-container');
 
-const colors = ['red', 'yellow', 'blue', 'green', 'black'];
-const sizes = ['S', 'L', 'M', 'O', 'R'];
+function Shoes(color, size) {
+  this.color = color;
+  this.size = size;
+}
 
-const array = [];
-
-product.addEventListener('click', (e) => {
-  const item = e.target.id;
-
-  for (const color of colors) {
-    if (color === item) {
-      if (!array.includes(item)) {
-        array.push(item);
-      }
+select.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    const get = new Shoes(e.target.value, undefined);
+    if (get.size === 'undefined') {
+      get.size = e.target.value;
+      return;
+    } else {
+      get.size = e.target.value;
+      // We continued with the objects
     }
-  }
 
-  for (const size of sizes) {
-    if (size === item) {
-      if (!array.includes(item)) {
-        array.push(item);
-      }
-    }
-  }
-  console.log(array);
+    console.log(get);
+  });
 });
