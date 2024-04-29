@@ -30,18 +30,16 @@
         </nav>
       </header>
 
-      <main id="main">
-        <button id="button_next">new</button>
+      <main class="main">
+        <picture class="picture">
+          <img src="./assets/NikeMX.png" alt="" class="picture-image" />
+        </picture>
 
-        <section class="main-image__content">
-          <img src="./assets/NikeMX.png" alt="" class="main-image" />
-        </section>
+        <article class="product-container">
+          <h1 class="product-title">Nike</h1>
 
-        <section class="main-product__content">
-          <h1 class="main-product__title">Nike</h1>
-
-          <section class="main-product__info-content">
-            <p class="main-product__info">
+          <section class="product-info__content">
+            <p class="product-info__text">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
               vitae debitis cumque soluta, minus repudiandae omnis quibusdam
               dignissimos libero incidunt, quam nisi, veritatis corporis?
@@ -52,25 +50,57 @@
             <h2 class="color-title">Color</h2>
 
             <ul class="color-list">
-              <li class="color-list__item">
-                <a href="#" class="color-list__link" id="red"></a>
-              </li>
+              <form class="color-list__form">
+                <li class="color-form__item">
+                  <input
+                    name="color"
+                    type="radio"
+                    class="color-list__select"
+                    value="red"
+                    id="red"
+                  />
+                </li>
 
-              <li class="color-list__item">
-                <a href="#" class="color-list__link" id="yellow"></a>
-              </li>
+                <li class="color-form__item">
+                  <input
+                    name="color"
+                    type="radio"
+                    class="color-list__select"
+                    value="yellow"
+                    id="yellow"
+                  />
+                </li>
 
-              <li class="color-list__item">
-                <a href="#" class="color-list__link" id="blue"></a>
-              </li>
+                <li class="color-form__item">
+                  <input
+                    name="color"
+                    type="radio"
+                    class="color-list__select"
+                    value="blue"
+                    id="blue"
+                  />
+                </li>
 
-              <li class="color-list__item">
-                <a href="#" class="color-list__link" id="green"></a>
-              </li>
+                <li class="color-form__item">
+                  <input
+                    name="color"
+                    type="radio"
+                    class="color-list__select"
+                    value="green"
+                    id="green"
+                  />
+                </li>
 
-              <li class="color-list__item">
-                <a href="#" class="color-list__link" id="black"></a>
-              </li>
+                <li class="color-form__item">
+                  <input
+                    name="color"
+                    type="radio"
+                    class="color-list__select"
+                    value="black"
+                    id="black"
+                  />
+                </li>
+              </form>
             </ul>
           </section>
 
@@ -78,25 +108,57 @@
             <h2 class="size-title">Size</h2>
 
             <ul class="size-list">
-              <li class="size-item">
-                <a href="#" class="size-item__link" id="S">S</a>
-              </li>
+              <form class="size-list__form">
+                <li class="size-form__item">
+                  <input
+                    name="size"
+                    type="radio"
+                    class="size-list__select"
+                    value="S"
+                    id="S"
+                  />
+                </li>
 
-              <li class="size-item">
-                <a href="#" class="size-item__link" id="L">L</a>
-              </li>
+                <li class="size-form__item">
+                  <input
+                    name="size"
+                    type="radio"
+                    class="size-list__select"
+                    value="L"
+                    id="L"
+                  />
+                </li>
 
-              <li class="size-item">
-                <a href="#" class="size-item__link" id="M">M</a>
-              </li>
+                <li class="size-form__item">
+                  <input
+                    name="size"
+                    type="radio"
+                    class="size-list__select"
+                    value="M"
+                    id="M"
+                  />
+                </li>
 
-              <li class="size-item">
-                <a href="#" class="size-item__link" id="O">O</a>
-              </li>
+                <li class="size-form__item">
+                  <input
+                    name="size"
+                    type="radio"
+                    class="size-list__select"
+                    value="O"
+                    id="O"
+                  />
+                </li>
 
-              <li class="size-item">
-                <a href="#" class="size-item__link" id="R">R</a>
-              </li>
+                <li class="size-form__item">
+                  <input
+                    name="size"
+                    type="radio"
+                    class="size-list__select"
+                    value="R"
+                    id="R"
+                  />
+                </li>
+              </form>
             </ul>
           </section>
 
@@ -109,7 +171,7 @@
               <span class="buys-price">$3.400</span>
             </article>
           </section>
-        </section>
+        </article>
       </main>
     </section>
     <script src="./js/app.js"></script>
