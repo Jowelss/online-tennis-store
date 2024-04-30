@@ -3,19 +3,17 @@ const select = document.querySelectorAll('.product-container');
 function Shoes(color, size) {
   this.color = color;
   this.size = size;
+
+  this.runSize = function name() {
+    this.size();
+  };
 }
 
 select.forEach((item) => {
   item.addEventListener('click', (e) => {
-    const get = new Shoes(e.target.value, undefined);
-    if (get.size === 'undefined') {
-      get.size = e.target.value;
-      return;
-    } else {
-      get.size = e.target.value;
-      // We continued with the objects
-    }
-
-    console.log(get);
+    const get = new Shoes(e.target.value, function coso() {
+      console.log(e.target.value);
+    });
+    get.runSize();
   });
 });
