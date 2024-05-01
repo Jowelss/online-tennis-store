@@ -1,19 +1,12 @@
-const select = document.querySelectorAll('.product-container');
+const list = document.querySelectorAll('.list__select');
+const buttonAdd = document.getElementById('buys-add');
 
-function Shoes(color, size) {
-  this.color = color;
-  this.size = size;
+function extraerDatos() {
+  for (let i = 0; i < list.length; i++) {
+    const element = list[i];
 
-  this.runSize = function name() {
-    this.size();
-  };
+    console.log(element);
+  }
 }
 
-select.forEach((item) => {
-  item.addEventListener('click', (e) => {
-    const get = new Shoes(e.target.value, function coso() {
-      console.log(e.target.value);
-    });
-    get.runSize();
-  });
-});
+extraerDatos();
