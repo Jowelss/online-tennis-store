@@ -1,27 +1,39 @@
-const list = document.querySelectorAll('.list__select');
+const colorList = document.querySelectorAll('.color-list__select');
+const sizeList = document.querySelectorAll('.size-list__select');
 const nameProduct = document.querySelector('.product-title').textContent;
 const buttonAdd = document.getElementById('buys-add');
 
-const styleProduct = [];
+const colorProduct = [];
+const sizeProduct = [];
 
 function addCart() {
   const cart = [];
 
   const coso = {
     nombre: nameProduct,
-    color: styleProduct[0],
-    size: styleProduct[1],
+    color: colorProduct[0],
+    size: sizeProduct[0],
   };
 
   cart.push(coso);
-  console.log(cart);
+  console.log(coso);
 }
 
-function extraerDatos(evento) {
-  if (styleProduct.length < 2) {
-    styleProduct.includes(evento)
+function extraerDatosColor(evento) {
+  if (colorProduct.length < 1) {
+    colorProduct.includes(evento)
       ? console.log('El elemento ya existe en el carrito')
-      : styleProduct.push(evento);
+      : colorProduct.push(evento);
+  } else {
+    console.log('Máximo de elecciones alcanzadas');
+  }
+}
+
+function extraerDatosSize(evento) {
+  if (sizeProduct.length < 1) {
+    sizeProduct.includes(evento)
+      ? console.log('El elemento ya existe')
+      : sizeProduct.push(evento);
   } else {
     console.log('Máximo de elecciones alcanzadas');
   }
@@ -29,6 +41,10 @@ function extraerDatos(evento) {
 
 buttonAdd.addEventListener('click', addCart);
 
-list.forEach((item) => {
-  item.addEventListener('click', (e) => extraerDatos(e.target.value));
+colorList.forEach((item) => {
+  item.addEventListener('click', (e) => extraerDatosColor(e.target.value));
+});
+
+sizeList.forEach((item) => {
+  item.addEventListener('click', (e) => extraerDatosSize(e.target.value));
 });
