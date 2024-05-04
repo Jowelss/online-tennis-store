@@ -120,10 +120,12 @@ body {
 #sub-container .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__select {
   cursor: pointer;
   appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  background-color: #080;
+  width: 20px;
+  height: 20px;
+  background-color: #00f;
+}
+#sub-container .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__select:checked {
+  border: 2px solid #000;
 }
 #sub-container .main .product-container .buys-container {
   display: flex;
@@ -131,13 +133,15 @@ body {
   align-items: center;
   margin: 0 20px;
 }
-#sub-container .main .product-container .buys-container .buys-add__content .buys-add {
+#sub-container .main .product-container .buys-container .buys-add__content #buys-add {
+  all: unset;
   display: block;
   padding: 10px 40px;
   background-color: #00f;
   font-size: 1.3em;
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
 }
 #sub-container .main .product-container .buys-container .buys-price__content .buys-price {
   font-size: 2.3em;
