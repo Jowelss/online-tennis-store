@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -21,8 +24,9 @@ body {
       align-items: center;
 
       #header-nav__logo-content {
+        width: max-content;
         #header-nav__logo {
-          font-size: 2rem;
+          width: 80px;
         }
       }
       .header-nav__list {
@@ -40,11 +44,10 @@ body {
   }
 
   .main {
-    position: relative;
     display: flex;
     margin-top: 50px;
     border-radius: 10px;
-    border: 1px solid black;
+    box-shadow: 0 0 10px 1px #c0c0c09c;
     overflow: hidden;
 
     .picture {
@@ -52,8 +55,9 @@ body {
 
       .picture-image {
         width: 100%;
-        object-fit: contain;
-        object-position: center;
+        height: 100%;
+        // object-fit: fill;
+        // object-position: center;
       }
     }
 
@@ -62,6 +66,7 @@ body {
       flex-direction: column;
       gap: 20px;
       padding: 30px;
+      box-shadow: inset;
 
       .product-title {
         font-size: 2em;
