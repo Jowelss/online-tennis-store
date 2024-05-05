@@ -1,16 +1,20 @@
 const colorList = document.querySelectorAll('.color-list__select');
+const buttonAdd = document.getElementById('buys-add');
+const input = document.querySelectorAll('input');
 const image = document.querySelector('.picture-image');
 const sizeList = document.querySelectorAll('.size-list__select');
-const nameProduct = document.querySelector('.product-title').textContent;
-const buttonAdd = document.getElementById('buys-add');
 
 const cart = [];
 
 const data = {};
 
 function addCart() {
-  const newDate = { ...data };
-  cart.push(newDate);
+  const newData = { ...data };
+
+  cart.push(newData);
+
+  input.forEach((item) => (item.checked = false));
+
   console.log(cart);
 }
 
