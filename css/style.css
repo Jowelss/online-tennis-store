@@ -63,20 +63,20 @@ body {
   font-size: 2em;
 }
 #sub-container .main .product-container .product-info__content {
-  position: relative;
   height: 100px;
-  transition: 1s;
+  padding: 0px 10px 20px;
+  transition: 0.3s;
   overflow-y: scroll;
-}
-#sub-container .main .product-container .product-info__content::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(#fff, transparent 40%, #fff);
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  box-shadow: inset 0 -10px 10px 10px #fff;
+  transition: 1s;
 }
 #sub-container .main .product-container .product-info__content .product-info__text {
+  position: relative;
+  z-index: -1;
   color: #000;
+  user-select: none;
 }
 #sub-container .main .product-container .color-container .color-title {
   margin-bottom: 10px;
