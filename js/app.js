@@ -3,6 +3,8 @@ const buttonAdd = document.getElementById('buys-add');
 const input = document.querySelectorAll('input');
 const image = document.querySelector('.picture-image');
 const sizeList = document.querySelectorAll('.size-list__select');
+const buttonNext = document.querySelector('.button-next__content');
+const main = document.querySelector('.main');
 
 const cart = [];
 
@@ -37,4 +39,12 @@ colorList.forEach((itemColor) => {
 
 sizeList.forEach((itemSize) => {
   itemSize.addEventListener('click', (e) => extraerDatosSize(e.target.value));
+});
+
+buttonNext.addEventListener('click', () => {
+  if (main.classList.contains('next-product')) {
+    main.classList.remove('next-product');
+  } else {
+    main.classList.add('next-product');
+  }
 });
