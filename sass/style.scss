@@ -11,15 +11,39 @@
 body {
   min-height: 100vh;
   margin: 0 10px;
+  background-color: #fff;
 }
 
-#sub-container {
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   max-width: 900px;
   margin: 0 auto;
+  min-height: 100vh;
+  padding: 0 1rem;
+  position: relative;
+
+  .button-next__content {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 2px;
+    right: -50px;
+    top: 50%;
+    bottom: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px 1px #e7e7e77a;
+
+    .button-next {
+      width: 100%;
+    }
+  }
 
   #header {
-    padding-top: 16px;
-
     #header-nav {
       display: flex;
       justify-content: space-between;
@@ -46,47 +70,34 @@ body {
     }
   }
 
-  // .next-product {
-  //   animation-name: toto;
-  //   animation-duration: 2s;
-  //   animation-iteration-count: infinite;
+  .next-product {
+    animation-name: toto;
+    animation-duration: 2s;
 
-  //   @keyframes toto {
-  //     0% {
-  //       transform: scale(1);
-  //     }
-  //     90% {
-  //       transform: scale(0.9);
-  //     }
-  //     100% {
-  //       transform: translateX(-120px);
-  //     }
-  //   }
-  // }
-  .main {
-    display: flex;
-    margin-top: 50px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 1px #e7e7e77a;
-    // overflow: hidden;  comentado para funcione el buton 'next', pero ahora la imagen del tenis sobresale el contenedor
-    position: relative;
+    @keyframes toto {
+      10% {
+        transform: scale(0.9);
+      }
+      20% {
+        transform: translateX(-900px) scale(0.9);
+      }
 
-    .button-next__content {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background-color: #b3a1a1;
-      border-radius: 50%;
-      padding: 2px;
-      right: -50px;
-      top: 50%;
-      bottom: 50%;
-      cursor: pointer;
-      transform: translate(-50%, -50%);
-      .button-next {
-        width: 100%;
+      30% {
+        opacity: 0;
+        transform: translateX(1800px) scale(0.9);
+      }
+
+      40% {
+        opacity: 1;
+        transform: scale(0.9);
       }
     }
+  }
+
+  .main {
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px #e7e7e77a;
 
     .picture {
       min-width: 450px;
