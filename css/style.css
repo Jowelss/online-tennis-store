@@ -60,6 +60,7 @@ body {
   transform: translate(-50%, -50%);
   background-color: #fff;
   box-shadow: 0 0 10px 1px rgba(231, 231, 231, 0.4784313725);
+  z-index: 1;
 }
 .sub-container .overflow-button .button-next__content .button-next {
   width: 100%;
@@ -71,24 +72,24 @@ body {
 }
 @keyframes toto {
   10% {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   100% {
-    transform: translateX(-900px) scale(0.8);
+    transform: translateX(-900px) scale(0.9);
   }
 }
 .sub-container .overflow-button .traslate-right {
-  transform: translateX(1800px) scale(0.8);
+  transform: translateX(1800px) scale(0.9);
   animation-name: coso;
-  animation-duration: 2s;
+  animation-duration: 1.3s;
   animation-fill-mode: forwards;
 }
 @keyframes coso {
   10% {
-    transform: none scale(0.8);
+    transform: none scale(0.9);
   }
   50% {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
