@@ -1,10 +1,9 @@
 const colorList = document.querySelectorAll('.color-list__select');
 const buttonAdd = document.getElementById('buys-add');
 const input = document.querySelectorAll('input');
-const image = document.querySelector('.picture-image');
 const sizeList = document.querySelectorAll('.size-list__select');
 const buttonTraslateRigth = document.querySelector('.button-next__content');
-const main = document.querySelector('.main');
+const main = document.querySelector('.main'); //Para agregar las dos clases para que el evento funcione
 
 const cart = [];
 
@@ -42,5 +41,12 @@ sizeList.forEach((itemSize) => {
 });
 
 buttonTraslateRigth.addEventListener('click', () => {
-  main.classList.add('traslate-right');
+  if (!main.classList.contains('traslate-left')) {
+    main.classList.add('traslate-left');
+    setTimeout(() => {
+      main.classList.remove('traslate-left');
+      main.classList.add('traslate-right');
+    }, 1000);
+    main.classList.remove('traslate-right');
+  }
 });
