@@ -102,8 +102,11 @@ body {
 }
 .sub-container .overflow-button .main .picture {
   min-width: 450px;
+  height: 480px;
 }
 .sub-container .overflow-button .main .picture .picture-image {
+  object-fit: cover;
+  object-position: center;
   width: 100%;
   height: 100%;
 }
@@ -115,8 +118,12 @@ body {
 }
 .sub-container .overflow-button .main .product-container .product-title {
   font-size: 2em;
+  text-wrap: nowrap;
 }
 .sub-container .overflow-button .main .product-container .product-info__content {
+  display: flex;
+  align-items: center;
+  height: 120px;
   padding: 8px;
   border-radius: 10px;
   box-shadow: 0 0 8px 3px rgba(231, 231, 231, 0.4784313725);
