@@ -7,12 +7,16 @@ const main = document.querySelector('.main'); //Para agregar las dos clases para
 const template = document.getElementById('template');
 const productTitle = document.querySelector('.product-title');
 const productInfo = document.querySelector('.product-info__text');
+const productPrice = document.querySelector('.buys-price');
+const productImage = document.querySelector('.picture-image');
 
 const cart = [];
 
 const data = {};
 
 function addCart() {
+  data['nombre'] = productTitle.textContent;
+
   const newData = { ...data };
 
   cart.push(newData);
@@ -45,13 +49,17 @@ sizeList.forEach((itemSize) => {
 
 buttonTraslateRigth.addEventListener('click', () => {
   const copyTemplate = document.importNode(template.content, true);
-  const adidasTitle = copyTemplate.querySelector('.adidas-title').textContent;
-  const adidasInfo = copyTemplate.querySelector('.adidas-info').textContent;
+  const nikeTitle = copyTemplate.querySelector('.nikeOne-title').textContent;
+  const nikeInfo = copyTemplate.querySelector('.nikeTwo-info').textContent;
+  const nikePrice = copyTemplate.querySelector('.nikeTwo-price').textContent;
+  const nikeImage = copyTemplate.querySelector('.nikeOne-image').src;
   if (!main.classList.contains('traslate-left')) {
     main.classList.add('traslate-left');
     setTimeout(() => {
-      productTitle.textContent = adidasTitle;
-      productInfo.textContent = adidasInfo;
+      productTitle.textContent = nikeTitle;
+      productInfo.textContent = nikeInfo;
+      productPrice.textContent = nikePrice;
+      productImage.src = nikeImage;
       main.classList.remove('traslate-left');
       main.classList.add('traslate-right');
     }, 1000);
