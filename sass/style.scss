@@ -21,7 +21,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   min-height: 100vh;
-  padding: 0 1rem;
+  padding: 0 2rem;
   overflow: hidden;
 
   #header {
@@ -67,7 +67,7 @@ body {
       cursor: pointer;
       transform: translate(-50%, -50%);
       background-color: #fff;
-      box-shadow: 0 0 10px 1px #e7e7e77a;
+      box-shadow: 0 0 10px 1px #d1d1d1b4;
       z-index: 1;
       .button-next {
         width: 100%;
@@ -114,7 +114,8 @@ body {
     .main {
       display: flex;
       border-radius: 10px;
-      box-shadow: 0 0 10px 1px #e7e7e77a;
+      box-shadow: 0 0 0px 4px #e7e7e7ad;
+      overflow: hidden;
 
       .picture {
         min-width: 450px;
@@ -213,21 +214,29 @@ body {
                 align-items: center;
                 justify-content: center;
                 position: relative;
+                transition: 0.2s;
+                border-radius: 10px;
+
+                &:hover {
+                  transform: scale(1.1);
+                  background-color: #f0f0f0;
+                }
                 .size-list__label {
                   position: absolute;
                   font-weight: 500;
                   cursor: pointer;
+                  user-select: none;
                 }
                 .size-list__select {
                   cursor: pointer;
                   appearance: none;
                   width: 38px;
                   height: 26px;
-                  border-radius: 10px;
                   box-shadow: 0 0 5px 2px #e0e0e0;
+                  border-radius: 10px;
 
                   &:checked {
-                    border: 2px solid #000;
+                    border: 2px solid #7e7e7e;
                   }
                 }
               }

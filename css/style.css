@@ -20,7 +20,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   min-height: 100vh;
-  padding: 0 1rem;
+  padding: 0 2rem;
   overflow: hidden;
 }
 .sub-container #header #header-nav {
@@ -59,7 +59,7 @@ body {
   cursor: pointer;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  box-shadow: 0 0 10px 1px rgba(231, 231, 231, 0.4784313725);
+  box-shadow: 0 0 10px 1px rgba(209, 209, 209, 0.7058823529);
   z-index: 1;
 }
 .sub-container .overflow-button .button-next__content .button-next {
@@ -98,7 +98,8 @@ body {
 .sub-container .overflow-button .main {
   display: flex;
   border-radius: 10px;
-  box-shadow: 0 0 10px 1px rgba(231, 231, 231, 0.4784313725);
+  box-shadow: 0 0 0px 4px rgba(231, 231, 231, 0.6784313725);
+  overflow: hidden;
 }
 .sub-container .overflow-button .main .picture {
   min-width: 450px;
@@ -188,22 +189,29 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+.sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
 }
 .sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__label {
   position: absolute;
   font-weight: 500;
   cursor: pointer;
+  user-select: none;
 }
 .sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__select {
   cursor: pointer;
   appearance: none;
   width: 38px;
   height: 26px;
-  border-radius: 10px;
   box-shadow: 0 0 5px 2px #e0e0e0;
+  border-radius: 10px;
 }
 .sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__select:checked {
-  border: 2px solid #000;
+  border: 2px solid #7e7e7e;
 }
 .sub-container .overflow-button .main .product-container .buys-container {
   display: flex;
