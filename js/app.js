@@ -2,9 +2,10 @@ const colorList = document.querySelectorAll('.color-list__select');
 const buttonAdd = document.getElementById('buys-add');
 const input = document.querySelectorAll('input');
 const sizeList = document.querySelectorAll('.size-list__select');
-const buttonTraslateRigth = document.querySelector('.button-next__content'); // boton para cambiar de porducto
-const main = document.querySelector('.main'); //Para agregar las dos clases para que el evento funcione
+const buttonTraslateRigth = document.querySelector('.button-next__content'); // Boton para cambiar de producto
+const main = document.querySelector('.main'); // Para agregar las dos clases de animacion para que el evento funcione
 const template = document.getElementById('template');
+
 const productTitle = document.querySelector('.product-title');
 const productInfo = document.querySelector('.product-info__text');
 const productPrice = document.querySelector('.buys-price');
@@ -47,22 +48,35 @@ sizeList.forEach((itemSize) => {
   itemSize.addEventListener('click', (e) => extraerDatosSize(e.target.value));
 });
 
+let num = 0;
+
 buttonTraslateRigth.addEventListener('click', () => {
   const copyTemplate = document.importNode(template.content, true);
-  const nikeTitle = copyTemplate.querySelector('.nikeOne-title').textContent;
-  const nikeInfo = copyTemplate.querySelector('.nikeTwo-info').textContent;
-  const nikePrice = copyTemplate.querySelector('.nikeTwo-price').textContent;
-  const nikeImage = copyTemplate.querySelector('.nikeOne-image').src;
+
+  const collection = copyTemplate.children;
+
+  const array = Array.from(collection);
+
   if (!main.classList.contains('traslate-left')) {
     main.classList.add('traslate-left');
+
     setTimeout(() => {
-      productTitle.textContent = nikeTitle;
-      productInfo.textContent = nikeInfo;
-      productPrice.textContent = nikePrice;
-      productImage.src = nikeImage;
+      productTitle.textContent = array[num].querySelector('.title').textContent;
+      productInfo.textContent = array[num].querySelector('.info').textContent;
+      productImage.src = array[num].querySelector('.image').src;
+      productPrice.textContent = array[num].querySelector('.price').textContent;
+
+      if (num < 1) {
+        num++;
+      } else {
+        num = 0;
+      }
+
       main.classList.remove('traslate-left');
+
       main.classList.add('traslate-right');
     }, 1000);
+
     main.classList.remove('traslate-right');
   }
 });
