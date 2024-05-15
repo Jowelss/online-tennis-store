@@ -10,7 +10,6 @@
 
 body {
   min-height: 100vh;
-  margin: 0 10px;
   background-color: #fff;
 }
 
@@ -18,10 +17,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   min-height: 100vh;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
   overflow: hidden;
 
   #header {
@@ -85,13 +84,13 @@ body {
         }
 
         100% {
-          transform: translateX(-900px) scale(0.9);
+          transform: translateX(-1000px) scale(0.9);
         }
       }
     }
 
     .traslate-right {
-      transform: translateX(1800px) scale(0.9);
+      transform: translateX(1900px) scale(0.9);
       animation-name: coso;
       animation-duration: 1.3s;
       animation-fill-mode: forwards;
@@ -114,11 +113,11 @@ body {
     .main {
       display: flex;
       border-radius: 10px;
-      box-shadow: 0 0 0px 4px #e7e7e7ad;
+      box-shadow: 0 0 5px 4px #e7e7e7ad;
       overflow: hidden;
 
       .picture {
-        min-width: 450px;
+        min-width: 480px;
         height: 480px;
 
         .picture-image {
@@ -148,6 +147,7 @@ body {
           border-radius: 10px;
           box-shadow: 0 0 8px 3px #e7e7e77a;
           .product-info__text {
+            text-wrap: wrap;
             color: #000;
             user-select: none;
           }

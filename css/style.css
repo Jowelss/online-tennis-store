@@ -9,7 +9,6 @@
 
 body {
   min-height: 100vh;
-  margin: 0 10px;
   background-color: #fff;
 }
 
@@ -17,10 +16,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   min-height: 100vh;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
   overflow: hidden;
 }
 .sub-container #header #header-nav {
@@ -75,11 +74,11 @@ body {
     transform: scale(0.9);
   }
   100% {
-    transform: translateX(-900px) scale(0.9);
+    transform: translateX(-1000px) scale(0.9);
   }
 }
 .sub-container .overflow-button .traslate-right {
-  transform: translateX(1800px) scale(0.9);
+  transform: translateX(1900px) scale(0.9);
   animation-name: coso;
   animation-duration: 1.3s;
   animation-fill-mode: forwards;
@@ -98,11 +97,11 @@ body {
 .sub-container .overflow-button .main {
   display: flex;
   border-radius: 10px;
-  box-shadow: 0 0 0px 4px rgba(231, 231, 231, 0.6784313725);
+  box-shadow: 0 0 5px 4px rgba(231, 231, 231, 0.6784313725);
   overflow: hidden;
 }
 .sub-container .overflow-button .main .picture {
-  min-width: 450px;
+  min-width: 480px;
   height: 480px;
 }
 .sub-container .overflow-button .main .picture .picture-image {
@@ -130,6 +129,7 @@ body {
   box-shadow: 0 0 8px 3px rgba(231, 231, 231, 0.4784313725);
 }
 .sub-container .overflow-button .main .product-container .product-info__content .product-info__text {
+  text-wrap: wrap;
   color: #000;
   user-select: none;
 }
