@@ -17,6 +17,7 @@ const data = {};
 
 function addCart() {
   data['nombre'] = productTitle.textContent;
+  data['price'] = +productPrice.textContent; // El signo '+' convierte el string en number
 
   const newData = { ...data };
 
