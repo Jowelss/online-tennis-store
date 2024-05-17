@@ -90,11 +90,30 @@ buttonTraslateRigth.addEventListener('click', () => {
 themeButton.addEventListener('click', () => {
   const body = document.body;
   const colorTextBody = document.querySelectorAll('*');
+  const shadowInfo = document.querySelector('.product-info__content');
+  const iconBlack = document.querySelector('.black');
+  const iconLight = document.querySelector('.light');
+
+  iconBlack.style.display = 'none';
+  iconLight.style.display = 'block';
 
   body.style.background = '#202022';
   body.style.transition = '0.2s';
 
+  main.style.boxShadow = '0 0 5px 4px #131313ad';
+
+  buttonAdd.style.boxShadow = '0 0 5px 4px #131313ad';
+
+  shadowInfo.style.boxShadow = '0 0 5px 4px #131313ad';
+
+  buttonTraslateRigth.style.boxShadow = '0 0 5px 4px #131313ad';
+  buttonTraslateRigth.style.background = '#202022';
+
   colorTextBody.forEach((element) => {
     element.style.color = '#fff';
+  });
+
+  sizeList.forEach((element) => {
+    element.style.boxShadow = '0 0 5px 4px #131313ad';
   });
 });
