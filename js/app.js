@@ -10,6 +10,7 @@ const productTitle = document.querySelector('.product-title');
 const productInfo = document.querySelector('.product-info__text');
 const productPrice = document.querySelector('.buys-price');
 const productImage = document.querySelector('.picture-image');
+const themeButton = document.querySelector('.header-nav__theme-icon');
 
 const cart = [];
 
@@ -84,4 +85,16 @@ buttonTraslateRigth.addEventListener('click', () => {
 
     main.classList.remove('traslate-right');
   }
+});
+
+themeButton.addEventListener('click', () => {
+  const body = document.body;
+  const colorTextBody = document.querySelectorAll('*');
+
+  body.style.background = '#202022';
+  body.style.transition = '0.2s';
+
+  colorTextBody.forEach((element) => {
+    element.style.color = '#fff';
+  });
 });
