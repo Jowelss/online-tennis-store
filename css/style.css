@@ -143,7 +143,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 0 30px;
+  padding: 20px 30px;
 }
 .sub-container .overflow-button .main .product-container .product-title {
   font-size: 2em;
@@ -232,33 +232,36 @@ body {
   appearance: none;
   width: 38px;
   height: 26px;
-  box-shadow: 0 0 5px 2px #e0e0e0;
+  box-shadow: 0 0 5px 2px #f1f1f1;
   border-radius: 10px;
 }
 .sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__select:checked {
-  border: 2px solid #7e7e7e;
+  border: 2px solid #202022;
   transition: 0.2s;
   transform: scale(1.2);
-}
-.sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__select:checked .size-form__item {
-  background-color: #00f;
 }
 .sub-container .overflow-button .main .product-container .buys-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
 }
 .sub-container .overflow-button .main .product-container .buys-container .buys-add__content #buys-add {
   all: unset;
   display: block;
   padding: 10px 40px;
-  background-color: rgb(34, 34, 255);
+  border: 2px solid #202022;
   border-radius: 10px;
   font-size: 1.3em;
   font-weight: 600;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   cursor: pointer;
+  transition: 0.2s;
+}
+.sub-container .overflow-button .main .product-container .buys-container .buys-add__content #buys-add:hover {
+  transform: scale3d(1.06, 1.06, 1.8);
+  box-shadow: 0 0 20px 1px #f1f1f1;
 }
 .sub-container .overflow-button .main .product-container .buys-container .buys-price__content .buys-price {
   font-size: 2.3em;

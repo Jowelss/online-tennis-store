@@ -257,16 +257,13 @@ body {
                   appearance: none;
                   width: 38px;
                   height: 26px;
-                  box-shadow: 0 0 5px 2px #e0e0e0;
+                  box-shadow: 0 0 5px 2px #f1f1f1;
                   border-radius: 10px;
 
                   &:checked {
-                    border: 2px solid #7e7e7e;
+                    border: 2px solid #202022;
                     transition: 0.2s;
                     transform: scale(1.2);
-                    .size-form__item {
-                      background-color: #00f;
-                    }
                   }
                 }
               }
@@ -278,19 +275,26 @@ body {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          margin-top: 5px;
 
           .buys-add__content {
             #buys-add {
               all: unset;
               display: block;
               padding: 10px 40px;
-              background-color: rgb(34, 34, 255);
+              border: 2px solid #202022;
               border-radius: 10px;
               font-size: 1.3em;
               font-weight: 600;
               text-decoration: none;
-              color: #fff;
+              color: #000;
               cursor: pointer;
+              transition: 0.2s;
+
+              &:hover {
+                transform: scale3d(1.06, 1.06, 1.8);
+                box-shadow: 0 0 20px 1px #f1f1f1;
+              }
             }
           }
 
