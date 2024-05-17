@@ -17,7 +17,7 @@ const data = {};
 
 function addCart() {
   data['nombre'] = productTitle.textContent;
-  data['price'] = +productPrice.textContent; // El signo '+' convierte el string en number
+  data['price'] = productPrice.textContent;
 
   const newData = { ...data };
 
@@ -52,6 +52,8 @@ sizeList.forEach((itemSize) => {
 let num = 0;
 
 buttonTraslateRigth.addEventListener('click', () => {
+  input.forEach((item) => (item.checked = false));
+
   const copyTemplate = document.importNode(template.content, true);
 
   const collection = copyTemplate.children;
