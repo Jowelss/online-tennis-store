@@ -221,6 +221,9 @@ body {
   transition: 0.2s;
   border-radius: 10px;
 }
+.sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item:hover {
+  background-color: #f0f0f0;
+}
 .sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__label {
   position: absolute;
   font-weight: 500;
