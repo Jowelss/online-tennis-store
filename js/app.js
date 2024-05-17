@@ -65,7 +65,9 @@ buttonTraslateRigth.addEventListener('click', () => {
       productTitle.textContent = array[num].querySelector('.title').textContent;
       productInfo.textContent = array[num].querySelector('.info').textContent;
       productImage.src = array[num].querySelector('.image').src;
-      productPrice.textContent = array[num].querySelector('.price').textContent;
+      productPrice.textContent = `$${
+        array[num].querySelector('.price').textContent // Agregué el signo de dolar al precio
+      }`;
 
       if (num < 1) {
         num++;
@@ -76,7 +78,7 @@ buttonTraslateRigth.addEventListener('click', () => {
       main.classList.remove('traslate-left');
 
       main.classList.add('traslate-right');
-    }, 1000);
+    }, 800); // 0.8 segundos
 
     main.classList.remove('traslate-right');
   }
