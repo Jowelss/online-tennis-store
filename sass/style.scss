@@ -38,8 +38,17 @@ body {
       }
       .header-nav__list {
         display: flex;
+        align-items: center;
         gap: 3rem;
         list-style: none;
+
+        .header-nav__theme-icon {
+          cursor: pointer;
+
+          .header-nav__icon {
+            display: block;
+          }
+        }
 
         .header-nav__item {
           position: relative;

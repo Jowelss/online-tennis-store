@@ -38,8 +38,15 @@ body {
 }
 .sub-container #header #header-nav .header-nav__list {
   display: flex;
+  align-items: center;
   gap: 3rem;
   list-style: none;
+}
+.sub-container #header #header-nav .header-nav__list .header-nav__theme-icon {
+  cursor: pointer;
+}
+.sub-container #header #header-nav .header-nav__list .header-nav__theme-icon .header-nav__icon {
+  display: block;
 }
 .sub-container #header #header-nav .header-nav__list .header-nav__item {
   position: relative;
