@@ -48,6 +48,12 @@ body {
 .sub-container #header #header-nav .header-nav__list .header-nav__theme-icon .header-nav__icon {
   display: block;
 }
+.sub-container #header #header-nav .header-nav__list .header-nav__theme-icon .black {
+  display: block;
+}
+.sub-container #header #header-nav .header-nav__list .header-nav__theme-icon .light {
+  display: none;
+}
 .sub-container #header #header-nav .header-nav__list .header-nav__item {
   position: relative;
 }
