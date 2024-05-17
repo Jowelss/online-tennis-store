@@ -48,7 +48,7 @@ body {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #3b3b3f;
+  background-color: #57575a;
   border-radius: 100%;
   position: absolute;
   bottom: -2px;
@@ -93,11 +93,11 @@ body {
   width: 100%;
 }
 .sub-container .overflow-button .traslate-left {
-  animation-name: toto;
-  animation-duration: 1s;
+  animation-name: left;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
-@keyframes toto {
+@keyframes left {
   10% {
     transform: scale(0.9);
   }
@@ -106,12 +106,12 @@ body {
   }
 }
 .sub-container .overflow-button .traslate-right {
+  animation-name: right;
   transform: translateX(1900px) scale(0.9);
-  animation-name: coso;
-  animation-duration: 1.3s;
+  animation-duration: 1.2s;
   animation-fill-mode: forwards;
 }
-@keyframes coso {
+@keyframes right {
   10% {
     transform: none scale(0.9);
   }
@@ -124,6 +124,7 @@ body {
 }
 .sub-container .overflow-button .main {
   display: flex;
+  align-items: center;
   border-radius: 10px;
   box-shadow: 0 0 5px 4px rgba(231, 231, 231, 0.6784313725);
   overflow: hidden;
@@ -142,7 +143,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 30px;
+  padding: 0 30px;
 }
 .sub-container .overflow-button .main .product-container .product-title {
   font-size: 2em;
@@ -220,10 +221,6 @@ body {
   transition: 0.2s;
   border-radius: 10px;
 }
-.sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item:hover {
-  transform: scale(1.1);
-  background-color: #f0f0f0;
-}
 .sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__label {
   position: absolute;
   font-weight: 500;
@@ -240,6 +237,11 @@ body {
 }
 .sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__select:checked {
   border: 2px solid #7e7e7e;
+  transition: 0.2s;
+  transform: scale(1.2);
+}
+.sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__select:checked .size-form__item {
+  background-color: #00f;
 }
 .sub-container .overflow-button .main .product-container .buys-container {
   display: flex;
@@ -253,6 +255,7 @@ body {
   background-color: rgb(34, 34, 255);
   border-radius: 10px;
   font-size: 1.3em;
+  font-weight: 600;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
