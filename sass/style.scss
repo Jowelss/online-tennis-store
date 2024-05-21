@@ -12,6 +12,39 @@ body {
   min-height: 100vh;
   background-color: #fff;
 }
+.dark {
+  background-color: #202022;
+  transition: 0.2s;
+
+  .black {
+    display: none;
+  }
+
+  .main {
+    box-shadow: 0 0 5px 4px #131313ad;
+  }
+
+  .buys-add__content {
+    box-shadow: 0 0 5px 4px #131313ad;
+  }
+
+  .product-info__content {
+    box-shadow: 0 0 5px 4px #131313ad;
+  }
+
+  .button-next__content {
+    box-shadow: 0 0 5px 4px #131313ad;
+    background-color: #202022;
+  }
+
+  .size-list__select {
+    box-shadow: 0 0 5px 4px #131313ad;
+  }
+
+  * {
+    color: #fff;
+  }
+}
 
 .sub-container {
   display: flex;

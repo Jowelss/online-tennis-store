@@ -12,6 +12,33 @@ body {
   background-color: #fff;
 }
 
+.dark {
+  background-color: #202022;
+  transition: 0.2s;
+}
+.dark .black {
+  display: none;
+}
+.dark .main {
+  box-shadow: 0 0 5px 4px rgba(19, 19, 19, 0.6784313725);
+}
+.dark .buys-add__content {
+  box-shadow: 0 0 5px 4px rgba(19, 19, 19, 0.6784313725);
+}
+.dark .product-info__content {
+  box-shadow: 0 0 5px 4px rgba(19, 19, 19, 0.6784313725);
+}
+.dark .button-next__content {
+  box-shadow: 0 0 5px 4px rgba(19, 19, 19, 0.6784313725);
+  background-color: #202022;
+}
+.dark .size-list__select {
+  box-shadow: 0 0 5px 4px rgba(19, 19, 19, 0.6784313725);
+}
+.dark * {
+  color: #fff;
+}
+
 .sub-container {
   display: flex;
   flex-direction: column;
@@ -296,9 +323,6 @@ body {
 .sub-container #footer .footer-contact__container .footer-contact__item .footer-contact__link {
   color: #b1b1b1;
   text-decoration: none;
-}
-.sub-container #footer .footer-contact__container .footer-contact__item .footer-contact__link:hover {
-  text-decoration: solid;
 }
 .sub-container #footer .footer-networks__container .footer-networks__list {
   display: flex;
