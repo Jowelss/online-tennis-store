@@ -297,6 +297,9 @@ body {
   color: #b1b1b1;
   text-decoration: none;
 }
+.sub-container #footer .footer-contact__container .footer-contact__item .footer-contact__link:hover {
+  text-decoration: solid;
+}
 .sub-container #footer .footer-networks__container .footer-networks__list {
   display: flex;
   align-items: center;
