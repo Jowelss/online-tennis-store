@@ -1,5 +1,5 @@
 const colorList = document.querySelectorAll('.color-list__select');
-const buttonAdd = document.getElementById('buys-add');
+const buttonAdd = document.querySelector('.buys-add');
 const input = document.querySelectorAll('input');
 const sizeList = document.querySelectorAll('.size-list__select');
 const buttonTraslateRigth = document.querySelector('.button-next__content'); // Boton para cambiar de producto
@@ -10,7 +10,6 @@ const productTitle = document.querySelector('.product-title');
 const productInfo = document.querySelector('.product-info__text');
 const productPrice = document.querySelector('.buys-price');
 const productImage = document.querySelector('.picture-image');
-const themeButton = document.querySelector('.header-nav__theme-icon');
 
 const cart = [];
 
@@ -87,8 +86,38 @@ buttonTraslateRigth.addEventListener('click', () => {
   }
 });
 
-themeButton.addEventListener('click', () => {
-  const body = document.body;
+const themeButton = document.querySelector('.header-nav__theme-icon');
 
-  body.classList.add('dark');
+const universal = document.querySelectorAll('*');
+
+const body = document.body;
+
+const iconDark = document.querySelector('.black');
+const iconLight = document.querySelector('.light');
+const nikeLogo = document.querySelector('.header-nav__logo');
+
+const subContainer = document.querySelector('.sub-container');
+const productInfoContent = document.querySelector('.product-info__content');
+
+themeButton.addEventListener('click', () => {
+  iconDark.style.display = 'none';
+  iconLight.style.display = 'block';
+  nikeLogo.style.fill = '#fff';
+
+  subContainer.classList.add('sub-container__shade-dark');
+
+  body.style.background = 'var(--backgroundColor-body-dark)';
+  main.classList.add('main-shade__dark');
+  productInfoContent.classList.add('product-info__content-shade');
+  buttonTraslateRigth.classList.add('button-next__content-dark');
+
+  sizeList.forEach((element) => {
+    element.classList.add('size-list__select-shade');
+  });
+
+  universal.forEach((element) => {
+    element.style.color = 'var(--color-text-white)';
+  });
+
+  buttonAdd.style.color = '#32da78';
 });
