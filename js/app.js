@@ -100,24 +100,48 @@ const subContainer = document.querySelector('.sub-container');
 const productInfoContent = document.querySelector('.product-info__content');
 
 themeButton.addEventListener('click', () => {
-  iconDark.style.display = 'none';
-  iconLight.style.display = 'block';
-  nikeLogo.style.fill = '#fff';
+  if (themeButton.classList.toggle('true')) {
+    iconDark.style.display = 'none';
+    iconLight.style.display = 'block';
+    nikeLogo.style.fill = '#fff';
 
-  subContainer.classList.add('sub-container__shade-dark');
+    body.style.background = 'var(--backgroundColor-body-dark)';
 
-  body.style.background = 'var(--backgroundColor-body-dark)';
-  main.classList.add('main-shade__dark');
-  productInfoContent.classList.add('product-info__content-shade');
-  buttonTraslateRigth.classList.add('button-next__content-dark');
+    subContainer.classList.add('sub-container__shade-dark');
 
-  sizeList.forEach((element) => {
-    element.classList.add('size-list__select-shade');
-  });
+    main.classList.add('main-shade__dark');
+    productInfoContent.classList.add('product-info__content-shade');
+    buttonTraslateRigth.classList.add('button-next__content-dark');
 
-  universal.forEach((element) => {
-    element.style.color = 'var(--color-text-white)';
-  });
+    sizeList.forEach((element) => {
+      element.classList.add('size-list__select-shade');
+    });
 
-  buttonAdd.style.color = '#32da78';
+    universal.forEach((element) => {
+      element.style.color = 'var(--color-text-white)';
+    });
+
+    buttonAdd.style.color = '#32da78';
+  } else {
+    iconDark.style.display = 'block';
+    iconLight.style.display = 'none';
+    nikeLogo.style.fill = '#000';
+
+    subContainer.classList.remove('sub-container__shade-dark');
+
+    body.style.background = 'var(--backgroundColor-body-light)';
+    main.classList.remove('main-shade__dark');
+    productInfoContent.classList.remove('product-info__content-shade');
+    buttonTraslateRigth.classList.remove('button-next__content-dark');
+
+    sizeList.forEach((element) => {
+      element.classList.remove('size-list__select-shade');
+    });
+
+    universal.forEach((element) => {
+      element.style.color = 'var(--color-text-black)';
+    });
+
+    buttonAdd.style.color = '#32da78';
+  }
 });
