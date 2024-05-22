@@ -5,6 +5,7 @@
   --shade-color-dark: #161616;
   --color-text-white: #e0e0e0;
   --backgroundColor-body-dark: #1f1f20;
+  --backgroundColor-body-light: #fff;
 }
 
 * {
@@ -18,7 +19,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #fff;
+  background-color: var(--backgroundColor-body-light);
 }
 
 .sub-container {
@@ -66,7 +67,7 @@ body {
   position: relative;
 }
 .sub-container .header .header-nav .header-nav__list .header-nav__item:hover {
-  transform: scale(1.02);
+  transform: scale(1.12, 1.1);
 }
 .sub-container .header .header-nav .header-nav__list .header-nav__item .header-nav__link {
   font-weight: 600;
@@ -233,7 +234,7 @@ body {
   transition: 0.2s;
 }
 .sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item:hover {
-  background-color: rgba(240, 240, 240, 0.5254901961);
+  background-color: rgba(179, 174, 174, 0.6784313725);
 }
 .sub-container .overflow-button .main .product-container .size-container .size-list .size-list__form .size-form__item .size-list__label {
   position: absolute;
@@ -269,10 +270,9 @@ body {
   border: 2px solid #32da78;
   border-radius: 10px;
   overflow: hidden;
-  transition: 0.2s;
 }
 .sub-container .overflow-button .main .product-container .buys-container .buys-add__content:hover {
-  transform: scale(1.05);
+  transform: scale(1.07, 1.05);
 }
 .sub-container .overflow-button .main .product-container .buys-container .buys-add__content .buys-add {
   all: unset;
@@ -298,11 +298,9 @@ body {
   padding: 0 20px;
 }
 .sub-container #footer .footer-contact__container .footer-contact__item {
-  color: #b1b1b1;
   list-style: none;
 }
 .sub-container #footer .footer-contact__container .footer-contact__item .footer-contact__link {
-  color: #b1b1b1;
   text-decoration: none;
 }
 .sub-container #footer .footer-networks__container .footer-networks__list {
@@ -315,15 +313,22 @@ body {
   transition: 0.2s;
 }
 .sub-container #footer .footer-networks__container .footer-networks__list .footer-networks__item:hover {
-  transform: scale(1.1);
+  transform: scale(1.21, 1.1);
 }
 .sub-container #footer .footer-networks__container .footer-networks__list .footer-networks__item .footer-networks__link {
   color: #b1b1b1;
   text-decoration: none;
 }
 .sub-container #footer .footer-networks__container .footer-networks__list .footer-networks__item .footer-networks__link .fa-brands {
-  display: block;
-  color: #b1b1b1;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backgroundColor-body-light);
+  box-shadow: 0 0;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 4px var(--shade-color-light);
 }
 .sub-container #footer .footer-networks__container .footer-networks__list .footer-networks__item .footer-networks__link .fa-instagram {
   font-size: 20px;
