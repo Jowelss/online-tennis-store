@@ -63,9 +63,6 @@ body {
 .sub-container .header .header-nav .header-nav__list .header-nav__theme-icon .light {
   display: none;
 }
-.sub-container .header .header-nav .header-nav__list .header-nav__item {
-  position: relative;
-}
 .sub-container .header .header-nav .header-nav__list .header-nav__item:hover {
   transform: scale(1.12, 1.1);
 }
