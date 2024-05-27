@@ -393,6 +393,12 @@ body {
               box-shadow: 0 0 5px 4px var(--shade-color-light);
             }
 
+            .background-night {
+              // Se activa con JS
+              background-color: var(--backgroundColor-body-dark);
+              box-shadow: 0 0 5px 4px var(--shade-color-dark);
+            }
+
             .fa-instagram {
               font-size: 20px;
             }

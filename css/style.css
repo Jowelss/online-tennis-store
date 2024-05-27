@@ -327,6 +327,10 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 5px 4px var(--shade-color-light);
 }
+.sub-container #footer .footer-networks__container .footer-networks__list .footer-networks__item .footer-networks__link .background-night {
+  background-color: var(--backgroundColor-body-dark);
+  box-shadow: 0 0 5px 4px var(--shade-color-dark);
+}
 .sub-container #footer .footer-networks__container .footer-networks__list .footer-networks__item .footer-networks__link .fa-instagram {
   font-size: 20px;
 }
