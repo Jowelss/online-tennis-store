@@ -98,6 +98,7 @@ const nikeLogo = document.querySelector('.header-nav__logo');
 
 const subContainer = document.querySelector('.sub-container');
 const productInfoContent = document.querySelector('.product-info__content');
+const backgroundIcon = document.querySelectorAll('.fa-brands');
 
 themeButton.addEventListener('click', () => {
   if (themeButton.classList.toggle('true')) {
@@ -121,6 +122,10 @@ themeButton.addEventListener('click', () => {
       element.style.color = 'var(--color-text-white)';
     });
 
+    backgroundIcon.forEach((element) => {
+      element.classList.add('background-night');
+    });
+
     buttonAdd.style.color = '#32da78';
   } else {
     iconDark.style.display = 'block';
@@ -140,6 +145,10 @@ themeButton.addEventListener('click', () => {
 
     universal.forEach((element) => {
       element.style.color = 'var(--color-text-black)';
+    });
+
+    backgroundIcon.forEach((element) => {
+      element.classList.remove('background-night');
     });
 
     buttonAdd.style.color = '#32da78';
